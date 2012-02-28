@@ -8,6 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+@interface UILabel (PSStyleSheet)
+
++ (UILabel *)labelWithStyle:(NSString *)style;
+
+@end
+
+
 @interface PSStyleSheet : NSObject
 
 
