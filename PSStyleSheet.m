@@ -101,7 +101,10 @@ styles = _styles;
 + (void)setStyleSheet:(NSString *)styleSheet {
     NSString *styleSheetPath = [[NSBundle mainBundle] pathForResource:styleSheet ofType:@"plist"];
     assert(styleSheetPath != nil);
-    
+    [[self class] setStyleSheetPath:styleSheetPath];
+}
+
++ (void)setStyleSheetPath:(NSString *)styleSheetPath {
     NSMutableDictionary *styleSheetDict = [NSMutableDictionary dictionaryWithContentsOfFile:styleSheetPath];
     assert(styleSheetDict != nil);
     

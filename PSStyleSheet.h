@@ -40,6 +40,7 @@
  Loads styles from a plist file name
  */
 + (void)setStyleSheet:(NSString *)styleSheet;
++ (void)setStyleSheetPath:(NSString *)styleSheetPath;
 
 + (NSDictionary *)styleDictForStyle:(NSString *)style;
 
