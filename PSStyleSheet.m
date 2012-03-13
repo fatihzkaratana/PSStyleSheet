@@ -62,7 +62,7 @@ static PSStyleSheet *__defaultStyleSheet = nil;
 @implementation UILabel (PSStyleSheet)
 
 + (UILabel *)labelWithStyle:(NSString *)style {
-    UILabel *l = [[[UILabel alloc] initWithFrame:CGRectZero] autorelease];
+    UILabel *l = [[UILabel alloc] initWithFrame:CGRectZero];
     [PSStyleSheet applyStyle:style forLabel:l];
     return l;
 }
@@ -105,6 +105,12 @@ styles = _styles;
 - (void)dealloc {
     self.styles = nil;
     [super dealloc];
+}
+
+#pragma mark - Accessors
+
++ (NSArray *)styleNames {
+    return [[PSStyleSheet defaultStyleSheet].styles allKeys];
 }
 
 #pragma mark - Config

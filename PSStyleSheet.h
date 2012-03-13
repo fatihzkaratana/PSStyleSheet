@@ -51,6 +51,8 @@
 
 + (NSDictionary *)styleDictForStyle:(NSString *)style;
 
++ (NSArray *)styleNames;
+
 /**
  Apply a style to a UILabel
  */
