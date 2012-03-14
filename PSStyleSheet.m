@@ -62,7 +62,7 @@ static PSStyleSheet *__defaultStyleSheet = nil;
 @implementation UILabel (PSStyleSheet)
 
 + (UILabel *)labelWithStyle:(NSString *)style {
-    UILabel *l = [[UILabel alloc] initWithFrame:CGRectZero];
+    UILabel *l = [[[UILabel alloc] initWithFrame:CGRectZero] autorelease];
     [PSStyleSheet applyStyle:style forLabel:l];
     return l;
 }
